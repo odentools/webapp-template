@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "angularjs#~1.5.3"
+    "angular": "angularjs#~1.5.3",
+    "angular-material": "~1.0.7"
   }
 }

@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+
+		<meta charset="utf-8" />
 		<title>webapp-template</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Stylesheets-->
+		<link rel="stylesheet" href="/angular-material/angular-material.min.css" />
+		<link rel="stylesheet" href="/styles/style.css" />
+
+		<!-- Library - AngularJS -->
+		<script src="/angular/angular.min.js"></script>
+		<script src="/angular-animate/angular-animate.min.js"></script>
+		<script src="/angular-aria/angular-aria.min.js"></script>
+		<script src="/angular-messages/angular-messages.min.js"></script>
+		<!-- Library - Angular Material -->
+		<script src="/angular-material/angular-material.min.js"></script>
+
+		<!-- Application -->
+		<script src="/scripts/app.js"></script>
+
 	</head>
-	<body>
-		<h1>webapp-template</h1>
-		Hello.
+	<body ng-app="MyApp" ng-cloak>
+
+		<div layout="column" layout-fill>
+
+			<md-toolbar>
+				<div class="md-toolbar-tools">
+					<span>webapp-template</span>
+				</div>
+			</md-toolbar>
+
+			<md-card ng-controller="MainCtrl">
+				<md-card-content>
+					<h2>{{myMessage}}</h2>
+					<p>by OdenTools</p>
+				</md-card-content>
+				<md-card-actions layout="row" layout-align="end center">
+					<md-button ng-click="sayHello();">Hello</md-button>
+					<md-button ng-click="changeMessage();">Change Message</md-button>
+				</md-card-actions>
+			</md-card>
+
+		</div>
+
 	</body>
 </html>
