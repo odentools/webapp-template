@@ -1,0 +1,4 @@
+# Back-end libraries which installed by npm
+node_modules/
+# Front-end libraries which installed by Bower
+bower_components/
