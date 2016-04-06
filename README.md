@@ -9,16 +9,16 @@
 ## Principal Platforms & Libraries
 
 * Frontend:
-	* AngularJS v1
-	* Skyblue CSS Framework v1
+	* [AngularJS](https://angularjs.org/) v1
+	* [Angular Material](https://material.angularjs.org/) v1
 * Backend:
-	* Node.js v5
-	* Express v4
+	* [Node.js](https://nodejs.org/) v5
+	* [Express](http://expressjs.com/) v4
 * Package Management:
-	* npm (for backend)
-	* Bower v1 (for frontend)
+	* [npm](https://www.npmjs.com/) (for backend)
+	* [Bower](http://bower.io/) v1 (for frontend)
 * Test:
-	* ESLint v2
+	* [ESLint](http://eslint.org/) v2
 
 ## License
 
