@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "post-install": "bower install",
-    "test": "eslint .",
-    "start": "nodemon index.js"
+	"pretest": "eslint .",
+    "test": "echo \"No test specified\"",
+    "start": "node_nodemon index.js"
   },
   "author": "OdenTools",
   "license": "MIT",
