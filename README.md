@@ -1,8 +1,13 @@
 # webapp-template
 
+Basic template for Web Application
+
 ## Getting Started
 
+	$ git clone https://github.com/odentools/webapp-template.git
+	$ cd webapp-template/
 	$ npm install
+
 	$ npm start
 	$ npm test
 
