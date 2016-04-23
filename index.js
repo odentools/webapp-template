@@ -6,19 +6,25 @@
 
 'use strict';
 
-var express = require('express'),
-	bodyParser = require('body-parser');
+var express = require('express');
 
 var app = express();
 
-// Set the static assets directories
+// Publish the static directories
 app.use(express.static('bower_components'));
 app.use(express.static('public'));
 
-// Routes
-app.get('/', function (req, res) {
-	res.send('Hello');
+// Use application/json for Content-Type of POST request
+app.use(require('body-parser').json());
+
+// Allow the Cross Domain Request from JavaScript
+app.use(function (req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*');
+	next();
 });
+
+// Routes
+app.use('/api/articles', require(__dirname + '/routes/api/articles'));
 
 // Start the server
 var server = app.listen(3000, function () {
