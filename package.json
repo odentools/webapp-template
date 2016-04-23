@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "post-install": "bower install",
-	"pretest": "eslint .",
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "pretest": "eslint .",
     "test": "echo \"No test specified\"",
     "start": "nodemon index.js"
   },
