@@ -46,7 +46,7 @@ angular.module('MyApp', ['ngMaterial', 'angular-loading-bar'])
 	methods.getArticles = function(callback) {
 
 		$http.get('/api/articles').then(
-			function (res) { // Success
+			function (res) { // Successful
 				callback(null, res.data.articles);
 			},
 			function (res) { // Failed
@@ -71,7 +71,7 @@ angular.module('MyApp', ['ngMaterial', 'angular-loading-bar'])
 		};
 
 		$http.post('/api/articles', data).then(
-			function (res) { // Success
+			function (res) { // Successful
 				callback(null);
 			},
 			function (res) { // Failed
@@ -90,7 +90,7 @@ angular.module('MyApp', ['ngMaterial', 'angular-loading-bar'])
 	methods.deleteArticle = function(id, callback) {
 
 		$http.delete('/api/articles/' + id).then(
-			function (res) { // Success
+			function (res) { // Successful
 				callback(null);
 			},
 			function (res) { // Failed
@@ -114,7 +114,10 @@ angular.module('MyApp', ['ngMaterial', 'angular-loading-bar'])
 .controller('ArticlesCtrl', ['$scope', '$rootScope', 'ArticlesAPI',
 function($scope, $rootScope, ArticlesAPI) {
 
+	// Articles
 	$scope.articles = [];
+
+	// ----
 
 
 	/**
@@ -170,11 +173,13 @@ function($scope, $rootScope, ArticlesAPI) {
 .controller('ArticleEditorCtrl', ['$scope', '$rootScope', 'ArticlesAPI',
 function($scope, $rootScope, ArticlesAPI) {
 
+	// Article data
 	$scope.article = {
 		title: null,
 		content: null
 	};
 
+	// Error information
 	$scope.errorText = null;
 
 	// ----
@@ -187,9 +192,9 @@ function($scope, $rootScope, ArticlesAPI) {
 
 		ArticlesAPI.createArticle(article.title, article.content, function (err_text) {
 
-			if (err_text) {
+			if (err_text) { // Failed
 				$scope.errorText = 'Could not send the article.\n' + err_text;
-			} else {
+			} else { // Successful
 				$scope.errorText = null;
 			}
 
